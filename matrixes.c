@@ -9,19 +9,19 @@ typedef struct
 int get_matrix_num();
 int get_row();
 int get_col();
-//·ÖÅä¿Õ¼ä²»³õÊ¼»¯ 
+//åˆ†é…ç©ºé—´ä¸åˆå§‹åŒ– 
 void InitialMatrix(Matrix *A,int row,int col);
-//ÒªÏÈ·ÖÅäÄÚ´æºó²ÅÄÜÊ¹ÓÃ£¬ËùÓĞÔªËØ³õÊ¼»¯Îª0
+//è¦å…ˆåˆ†é…å†…å­˜åæ‰èƒ½ä½¿ç”¨ï¼Œæ‰€æœ‰å…ƒç´ åˆå§‹åŒ–ä¸º0
 void InitialMatrixZero(Matrix *A,int row,int col);
- //ÒªÏÈ·ÖÅäÄÚ´æºó²ÅÄÜÊ¹ÓÃ£¬ËùÓĞÔªËØ1-50ÕıÕûÊı
+ //è¦å…ˆåˆ†é…å†…å­˜åæ‰èƒ½ä½¿ç”¨ï¼Œæ‰€æœ‰å…ƒç´ 1-50æ­£æ•´æ•°
 void InitialMatrixRand(Matrix *A,int row,int col);
-//ÒªÏÈ·ÖÅäÄÚ´æºó²ÅÄÜÊ¹ÓÃ,¼üÅÌÊäÈë
+//è¦å…ˆåˆ†é…å†…å­˜åæ‰èƒ½ä½¿ç”¨,é”®ç›˜è¾“å…¥
 void InputMatrix(Matrix *A);
- //Éú³ÉÒ»¸öËæ»úÊı
+ //ç”Ÿæˆä¸€ä¸ªéšæœºæ•°
 int Randnum(); 
- //ÊÍ·Å¾ØÕó¿Õ¼ä 
+ //é‡Šæ”¾çŸ©é˜µç©ºé—´ 
 void DestroyMatrix(Matrix *A); 
-//Êä³ö¾ØÕó
+//è¾“å‡ºçŸ©é˜µ
 void PrintfMatrix(Matrix *A);
 //A+B=C
 int AddMatrix(Matrix *A,Matrix *B,Matrix *C);
@@ -29,24 +29,24 @@ int AddMatrix(Matrix *A,Matrix *B,Matrix *C);
 int MinusMatrix(Matrix *A,Matrix *B,Matrix *C);
 //A*B=C
 int MuitiMatrix(Matrix *A,Matrix *B,Matrix *C);
-//¾ØÕóÔªËØ¾ùÖµ
+//çŸ©é˜µå…ƒç´ å‡å€¼
 double MeanMatrix(Matrix *T);
-//¾ØÕóÔªËØ×î´óÖµ
+//çŸ©é˜µå…ƒç´ æœ€å¤§å€¼
 int MaxMatrix(Matrix *T);
-//ÇóT1µÄ×ÓÕóT2
+//æ±‚T1çš„å­é˜µT2
 int SubMatrix(Matrix *T1,Matrix *T2,int row_1,int row_2,int col_1,int col_2);
-//¾ØÕóµÄzhuanzhi
+//çŸ©é˜µçš„zhuanzhi
 void TransMatrix(Matrix *T);
-//¾ØÕó¹éÒ»»¯
+//çŸ©é˜µå½’ä¸€åŒ–
 void NormMatrix(Matrix *T);
 //B**(-1)=A
 void ReverseMatrix(Matrix *A,Matrix *B);
-//Ê¹Ä³Ò»ĞĞ¿ÉÒÔÊ¹ÓÃ¸ßË¹ÏûÔª·¨
+//ä½¿æŸä¸€è¡Œå¯ä»¥ä½¿ç”¨é«˜æ–¯æ¶ˆå…ƒæ³•
 void SwapRow(Matrix *T,Matrix *A,int UseRow);
 
-//½«¾ØÕó»¯ÎªĞĞ½×ÌİĞÎ¾ØÕó
+//å°†çŸ©é˜µåŒ–ä¸ºè¡Œé˜¶æ¢¯å½¢çŸ©é˜µ
 void REM(Matrix *A,Matrix *B);
-//½«ĞĞ½×ÌİĞÎ¾ØÕó»¯ÎªI
+//å°†è¡Œé˜¶æ¢¯å½¢çŸ©é˜µåŒ–ä¸ºI
 void Matrix_I(Matrix *A,Matrix *B);
 int main()
 { 
@@ -55,14 +55,14 @@ int main()
 		printf("*");
 	}
 	printf("\n");
-	printf("Ñ¡ÔñĞèÒªÖ´ĞĞµÄ¹¦ÄÜ£¬ÊäÈë¶ÔÓ¦µÄÊı×Ö£º\n 1. ÊäÈëÒ»¸ö¾ØÕó£¬Çó¾ØÕó¾ùÖµ\n");
-	printf(" 2. ²úÉúÒ»¸öËæ»úÊı¾ØÕó£¬Çó¾ØÕó¾ùÖµ\n");
-	printf(" 3. ÊäÈëÁ½¸ö¸ö¾ØÕó£¬Çó¾ØÕóºÍ\n 4. ÊäÈëÁ½¸ö¸ö¾ØÕó£¬Çó¾ØÕó²î\n");
-	printf(" 5. ÊäÈëÁ½¸ö¸ö¾ØÕó£¬Çó¾ØÕó»ı\n 6. ²úÉúÁ½¸ö¸öËæ»úÊı¾ØÕó£¬Çó¾ØÕóºÍ\n 7. ²úÉúÁ½¸ö¸öËæ»úÊı¾ØÕó£¬Çó¾ØÕó²î\n");
-	printf(" 8. ²úÉúÁ½¸ö¸öËæ»úÊı¾ØÕó£¬Çó¾ØÕó»ı\n 9. Çó¾ØÕóµÄ×ÓÕó£¬Èç¾ØÕóµÄ2-4ĞĞ£¬1-3ÁĞµÄ×ÓÕó\n");
-	printf("10. ÊäÈëÒ»¸ö¾ØÕó£¬Çó¾ØÕóÔªËØµÄ×î´óÖµ\n11. ²úÉúÒ»¸öËæ»úÊı¾ØÕó£¬Çó¾ØÕóÔªËØµÄ×î´óÖµ\n12. ÊäÈëÒ»¸ö¾ØÕó£¬Çó¾ØÕó×ªÖÃ\n13. ²úÉúÒ»¸öËæ»úÊı¾ØÕó£¬Çó¾ØÕó×ªÖÃ\n14. ÊäÈëÒ»¸ö¾ØÕó£¬Çó¾ØÕó¹éÒ»»¯\n15. ²úÉúÒ»¸öËæ»úÊı¾ØÕó£¬Çó¾ØÕó¹éÒ»»¯\n16. ÊäÈëÒ»¸ö¾ØÕó£¬Çó¾ØÕóµÄÄæ\n");
-	printf("17. ²úÉúÒ»¸öËæ»úÊı¾ØÕó£¬Çó¾ØÕóµÄÄæ\n 0:½áÊø!\n");
-	printf("¹¦ÄÜ£º"); 
+	printf("é€‰æ‹©éœ€è¦æ‰§è¡Œçš„åŠŸèƒ½ï¼Œè¾“å…¥å¯¹åº”çš„æ•°å­—ï¼š\n 1. è¾“å…¥ä¸€ä¸ªçŸ©é˜µï¼Œæ±‚çŸ©é˜µå‡å€¼\n");
+	printf(" 2. äº§ç”Ÿä¸€ä¸ªéšæœºæ•°çŸ©é˜µï¼Œæ±‚çŸ©é˜µå‡å€¼\n");
+	printf(" 3. è¾“å…¥ä¸¤ä¸ªä¸ªçŸ©é˜µï¼Œæ±‚çŸ©é˜µå’Œ\n 4. è¾“å…¥ä¸¤ä¸ªä¸ªçŸ©é˜µï¼Œæ±‚çŸ©é˜µå·®\n");
+	printf(" 5. è¾“å…¥ä¸¤ä¸ªä¸ªçŸ©é˜µï¼Œæ±‚çŸ©é˜µç§¯\n 6. äº§ç”Ÿä¸¤ä¸ªä¸ªéšæœºæ•°çŸ©é˜µï¼Œæ±‚çŸ©é˜µå’Œ\n 7. äº§ç”Ÿä¸¤ä¸ªä¸ªéšæœºæ•°çŸ©é˜µï¼Œæ±‚çŸ©é˜µå·®\n");
+	printf(" 8. äº§ç”Ÿä¸¤ä¸ªä¸ªéšæœºæ•°çŸ©é˜µï¼Œæ±‚çŸ©é˜µç§¯\n 9. æ±‚çŸ©é˜µçš„å­é˜µï¼Œå¦‚çŸ©é˜µçš„2-4è¡Œï¼Œ1-3åˆ—çš„å­é˜µ\n");
+	printf("10. è¾“å…¥ä¸€ä¸ªçŸ©é˜µï¼Œæ±‚çŸ©é˜µå…ƒç´ çš„æœ€å¤§å€¼\n11. äº§ç”Ÿä¸€ä¸ªéšæœºæ•°çŸ©é˜µï¼Œæ±‚çŸ©é˜µå…ƒç´ çš„æœ€å¤§å€¼\n12. è¾“å…¥ä¸€ä¸ªçŸ©é˜µï¼Œæ±‚çŸ©é˜µè½¬ç½®\n13. äº§ç”Ÿä¸€ä¸ªéšæœºæ•°çŸ©é˜µï¼Œæ±‚çŸ©é˜µè½¬ç½®\n14. è¾“å…¥ä¸€ä¸ªçŸ©é˜µï¼Œæ±‚çŸ©é˜µå½’ä¸€åŒ–\n15. äº§ç”Ÿä¸€ä¸ªéšæœºæ•°çŸ©é˜µï¼Œæ±‚çŸ©é˜µå½’ä¸€åŒ–\n16. è¾“å…¥ä¸€ä¸ªçŸ©é˜µï¼Œæ±‚çŸ©é˜µçš„é€†\n");
+	printf("17. äº§ç”Ÿä¸€ä¸ªéšæœºæ•°çŸ©é˜µï¼Œæ±‚çŸ©é˜µçš„é€†\n 0:ç»“æŸ!\n");
+	printf("åŠŸèƒ½ï¼š"); 
 	int select;
 	scanf("%d",&select);
 	switch(select)
@@ -81,7 +81,7 @@ int main()
 		case 2:
 		{
 			Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÒÔÏÂĞèÒªÊäÈëµÄÊÇËæ»úÊı¾ØÕóµÄĞÔÖÊ\n");
+			printf("ä»¥ä¸‹éœ€è¦è¾“å…¥çš„æ˜¯éšæœºæ•°çŸ©é˜µçš„æ€§è´¨\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
@@ -94,13 +94,13 @@ int main()
 		case 3:
 		{
 			Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("µÚÒ»¸ö¾ØÕóµÄĞÅÏ¢\n");
+			printf("ç¬¬ä¸€ä¸ªçŸ©é˜µçš„ä¿¡æ¯\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InputMatrix(A);
 			Matrix *B=(Matrix *)malloc(sizeof(Matrix));
-			printf("µÚ¶ş¸ö¾ØÕóµÄĞÅÏ¢\n");
+			printf("ç¬¬äºŒä¸ªçŸ©é˜µçš„ä¿¡æ¯\n");
 			row_1=get_row();
 			col_1=get_col();
 			InitialMatrix(B,row_1,col_1);
@@ -109,12 +109,12 @@ int main()
 			InitialMatrix(C,row_1,col_1);
 			if(AddMatrix(A,B,C)==1)
 			{
-				printf("ÒÔÏÂÊÇÏà¼ÓºóµÄ¾ØÕóµÄĞÅÏ¢\n");
+				printf("ä»¥ä¸‹æ˜¯ç›¸åŠ åçš„çŸ©é˜µçš„ä¿¡æ¯\n");
 				PrintfMatrix(C);
 			}
 			else
 			{
-				printf("ÕâÁ½¸ö¾ØÕóÎŞ·¨Ïà¼Ó\n");
+				printf("è¿™ä¸¤ä¸ªçŸ©é˜µæ— æ³•ç›¸åŠ \n");
 			}
 			DestroyMatrix(A);
 			DestroyMatrix(B);
@@ -123,13 +123,13 @@ int main()
 		}
 		case 4:{
 			Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("µÚÒ»¸ö¾ØÕóµÄĞÅÏ¢\n");
+			printf("ç¬¬ä¸€ä¸ªçŸ©é˜µçš„ä¿¡æ¯\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InputMatrix(A);
 			Matrix *B=(Matrix *)malloc(sizeof(Matrix));
-			printf("µÚ¶ş¸ö¾ØÕóµÄĞÅÏ¢\n");
+			printf("ç¬¬äºŒä¸ªçŸ©é˜µçš„ä¿¡æ¯\n");
 			row_1=get_row();
 			col_1=get_col();
 			InitialMatrix(B,row_1,col_1);
@@ -138,12 +138,12 @@ int main()
 			InitialMatrix(C,row_1,col_1);
 			if(MinusMatrix(A,B,C)==1)
 			{
-				printf("ÒÔÏÂÊÇÏà¼õºóµÄ¾ØÕóµÄĞÅÏ¢\n");
+				printf("ä»¥ä¸‹æ˜¯ç›¸å‡åçš„çŸ©é˜µçš„ä¿¡æ¯\n");
 				PrintfMatrix(C);
 			}
 			else
 			{
-				printf("ÕâÁ½¸ö¾ØÕóÎŞ·¨Ïà¼õ\n");
+				printf("è¿™ä¸¤ä¸ªçŸ©é˜µæ— æ³•ç›¸å‡\n");
 			}
 			DestroyMatrix(A);
 			DestroyMatrix(B);
@@ -152,13 +152,13 @@ int main()
 		}
 		case 5:{
 			Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("µÚÒ»¸ö¾ØÕóµÄĞÅÏ¢\n");
+			printf("ç¬¬ä¸€ä¸ªçŸ©é˜µçš„ä¿¡æ¯\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InputMatrix(A);
 			Matrix *B=(Matrix *)malloc(sizeof(Matrix));
-			printf("µÚ¶ş¸ö¾ØÕóµÄĞÅÏ¢\n");
+			printf("ç¬¬äºŒä¸ªçŸ©é˜µçš„ä¿¡æ¯\n");
 			int row_2=get_row();
 			int col_2=get_col();
 			InitialMatrix(B,row_2,col_2);
@@ -167,12 +167,12 @@ int main()
 			InitialMatrix(C,row_1,col_2);
 			if(MuitiMatrix(A,B,C)==1)
 			{
-				printf("ÒÔÏÂÊÇÏà³ËºóµÄ¾ØÕóµÄĞÅÏ¢\n");
+				printf("ä»¥ä¸‹æ˜¯ç›¸ä¹˜åçš„çŸ©é˜µçš„ä¿¡æ¯\n");
 				PrintfMatrix(C);
 			}
 			else
 			{
-				printf("ÕâÁ½¸ö¾ØÕóÎŞ·¨Ïà³Ë\n");
+				printf("è¿™ä¸¤ä¸ªçŸ©é˜µæ— æ³•ç›¸ä¹˜\n");
 			}
 			DestroyMatrix(A);
 			DestroyMatrix(B);
@@ -182,28 +182,28 @@ int main()
 		case 6:
 		{
 			Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÒÔÏÂĞèÒªÊäÈëµÄÊÇËæ»úÊı¾ØÕóµÄĞÔÖÊ\n");
+			printf("ä»¥ä¸‹éœ€è¦è¾“å…¥çš„æ˜¯éšæœºæ•°çŸ©é˜µçš„æ€§è´¨\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InitialMatrixRand(A,row_1,col_1);
-			printf("µÚÒ»¸ö¾ØÕó\n");
+			printf("ç¬¬ä¸€ä¸ªçŸ©é˜µ\n");
 			PrintfMatrix(A);
 			Matrix *B=(Matrix *)malloc(sizeof(Matrix));
 			InitialMatrix(B,row_1,col_1);
 			InitialMatrixRand(B,row_1,col_1);
-			printf("µÚ¶ş¸ö¾ØÕó\n");
+			printf("ç¬¬äºŒä¸ªçŸ©é˜µ\n");
 			PrintfMatrix(B);
 			Matrix *C=(Matrix *)malloc(sizeof(Matrix));
 			InitialMatrix(C,row_1,col_1);
 			if(AddMatrix(A,B,C)==1)
 			{
-				printf("ÒÔÏÂÊÇÏà¼ÓºóµÄ¾ØÕóµÄĞÅÏ¢\n");
+				printf("ä»¥ä¸‹æ˜¯ç›¸åŠ åçš„çŸ©é˜µçš„ä¿¡æ¯\n");
 				PrintfMatrix(C);
 			}
 			else
 			{
-				printf("ÕâÁ½¸ö¾ØÕóÎŞ·¨Ïà¼Ó\n");
+				printf("è¿™ä¸¤ä¸ªçŸ©é˜µæ— æ³•ç›¸åŠ \n");
 			}
 			DestroyMatrix(A);
 			DestroyMatrix(B);
@@ -213,28 +213,28 @@ int main()
 		case 7:
 		{
 			Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÒÔÏÂĞèÒªÊäÈëµÄÊÇËæ»úÊı¾ØÕóµÄĞÔÖÊ\n");
+			printf("ä»¥ä¸‹éœ€è¦è¾“å…¥çš„æ˜¯éšæœºæ•°çŸ©é˜µçš„æ€§è´¨\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InitialMatrixRand(A,row_1,col_1);
-			printf("µÚÒ»¸ö¾ØÕó\n");
+			printf("ç¬¬ä¸€ä¸ªçŸ©é˜µ\n");
 			PrintfMatrix(A);
 			Matrix *B=(Matrix *)malloc(sizeof(Matrix));
 			InitialMatrix(B,row_1,col_1);
 			InitialMatrixRand(B,row_1,col_1);
-			printf("µÚ¶ş¸ö¾ØÕó\n");
+			printf("ç¬¬äºŒä¸ªçŸ©é˜µ\n");
 			PrintfMatrix(B);
 			Matrix *C=(Matrix *)malloc(sizeof(Matrix));
 			InitialMatrix(C,row_1,col_1);
 			if(MinusMatrix(A,B,C)==1)
 			{
-				printf("ÒÔÏÂÊÇÏà¼õºóµÄ¾ØÕóµÄĞÅÏ¢\n");
+				printf("ä»¥ä¸‹æ˜¯ç›¸å‡åçš„çŸ©é˜µçš„ä¿¡æ¯\n");
 				PrintfMatrix(C);
 			}
 			else
 			{
-				printf("ÕâÁ½¸ö¾ØÕóÎŞ·¨Ïà¼õ\n");
+				printf("è¿™ä¸¤ä¸ªçŸ©é˜µæ— æ³•ç›¸å‡\n");
 			}
 			DestroyMatrix(A);
 			DestroyMatrix(B);
@@ -244,30 +244,30 @@ int main()
 		case 8:
         {
             Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÒÔÏÂĞèÒªÊäÈëµÄÊÇËæ»úÊı¾ØÕóµÄĞÔÖÊ\n");
+			printf("ä»¥ä¸‹éœ€è¦è¾“å…¥çš„æ˜¯éšæœºæ•°çŸ©é˜µçš„æ€§è´¨\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InitialMatrixRand(A,row_1,col_1);
-			printf("µÚÒ»¸ö¾ØÕó\n");
+			printf("ç¬¬ä¸€ä¸ªçŸ©é˜µ\n");
 			PrintfMatrix(A);
 			Matrix *B=(Matrix *)malloc(sizeof(Matrix));
             row_1=get_row();
 			col_1=get_col();
 			InitialMatrix(B,row_1,col_1);
 			InitialMatrixRand(B,row_1,col_1);
-			printf("µÚ¶ş¸ö¾ØÕó\n");
+			printf("ç¬¬äºŒä¸ªçŸ©é˜µ\n");
 			PrintfMatrix(B);
 			Matrix *C=(Matrix *)malloc(sizeof(Matrix));
 			InitialMatrix(C,row_1,col_1);
 			if(MuitiMatrix(A,B,C)==1)
 			{
-				printf("ÒÔÏÂÊÇÏà³ËºóµÄ¾ØÕóµÄĞÅÏ¢\n");
+				printf("ä»¥ä¸‹æ˜¯ç›¸ä¹˜åçš„çŸ©é˜µçš„ä¿¡æ¯\n");
 				PrintfMatrix(C);
 			}
 			else
 			{
-				printf("ÕâÁ½¸ö¾ØÕóÎŞ·¨Ïà³Ë\n");
+				printf("è¿™ä¸¤ä¸ªçŸ©é˜µæ— æ³•ç›¸ä¹˜\n");
 			}
 			DestroyMatrix(A);
 			DestroyMatrix(B);
@@ -277,17 +277,17 @@ int main()
 		case 9:
         {
             Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÊäÈë¾ØÕóµÄĞÅÏ¢\n");
+			printf("è¾“å…¥çŸ©é˜µçš„ä¿¡æ¯\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InputMatrix(A);
             int col_2;
             int row_2;
-            printf("ÇëĞèÒª²é¿´µÄ×ÓÕóµÄĞÅÏ¢");
-            printf("ÒÀ´ÎÊäÈëÊ¼Ä©ĞĞ,ÒÔ¿Õ¸ñ¸ô¿ª");
+            printf("è¯·éœ€è¦æŸ¥çœ‹çš„å­é˜µçš„ä¿¡æ¯");
+            printf("ä¾æ¬¡è¾“å…¥å§‹æœ«è¡Œ,ä»¥ç©ºæ ¼éš”å¼€");
             scanf("%d %d",&row_1,&row_2);
-            printf("ÒÀ´ÎÊäÈëÊ¼Ä©ÁĞ,ÒÔ¿Õ¸ñ¸ô¿ª");
+            printf("ä¾æ¬¡è¾“å…¥å§‹æœ«åˆ—,ä»¥ç©ºæ ¼éš”å¼€");
             scanf("%d %d",&col_1,&col_2);
             Matrix *T=(Matrix *)malloc(sizeof (Matrix));
             T->mat=(double **)malloc(sizeof(double*)*(row_2-row_1+1));
@@ -296,7 +296,7 @@ int main()
                 T->mat[i]=(double*)malloc(sizeof(double)*(col_2-col_1+1));
             }
             SubMatrix(T ,A , row_1 , row_2 , col_1 , col_2);
-            printf("×ÓÕóµÄĞÅÏ¢ÈçÏÂ\n");
+            printf("å­é˜µçš„ä¿¡æ¯å¦‚ä¸‹\n");
             PrintfMatrix(T);
             DestroyMatrix(T);
             DestroyMatrix(A);
@@ -305,12 +305,12 @@ int main()
 		case 10:
         {
             Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÊäÈë¾ØÕóµÄĞÅÏ¢\n");
+			printf("è¾“å…¥çŸ©é˜µçš„ä¿¡æ¯\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InputMatrix(A);
-            printf("×î´óÔªËØÊÇ");
+            printf("æœ€å¤§å…ƒç´ æ˜¯");
             printf("%d",MaxMatrix(A));
             DestroyMatrix(A);
             break;
@@ -318,13 +318,13 @@ int main()
 		case 11:
         {
             Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÒÔÏÂĞèÒªÊäÈëµÄÊÇËæ»úÊı¾ØÕóµÄĞÔÖÊ\n");
+			printf("ä»¥ä¸‹éœ€è¦è¾“å…¥çš„æ˜¯éšæœºæ•°çŸ©é˜µçš„æ€§è´¨\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InitialMatrixRand(A,row_1,col_1);
 			PrintfMatrix(A);
-            printf("×î´óÔªËØÊÇ");
+            printf("æœ€å¤§å…ƒç´ æ˜¯");
             printf("%d",MaxMatrix(A));
             DestroyMatrix(A);
             break;
@@ -332,12 +332,12 @@ int main()
 		case 12:
         {
             Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÊäÈë¾ØÕóµÄĞÅÏ¢\n");
+			printf("è¾“å…¥çŸ©é˜µçš„ä¿¡æ¯\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InputMatrix(A);
-            printf("¾ØÕóµÄ×ªÖÃÎª£º\n");
+            printf("çŸ©é˜µçš„è½¬ç½®ä¸ºï¼š\n");
             TransMatrix(A);
             DestroyMatrix(A);
             break;
@@ -345,13 +345,13 @@ int main()
 		case 13:
         {
             Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÒÔÏÂĞèÒªÊäÈëµÄÊÇËæ»úÊı¾ØÕóµÄĞÔÖÊ\n");
+			printf("ä»¥ä¸‹éœ€è¦è¾“å…¥çš„æ˜¯éšæœºæ•°çŸ©é˜µçš„æ€§è´¨\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InitialMatrixRand(A,row_1,col_1);
 			PrintfMatrix(A);
-            printf("¾ØÕóµÄ×ªÖÃÎª£º\n");
+            printf("çŸ©é˜µçš„è½¬ç½®ä¸ºï¼š\n");
             TransMatrix(A);
             DestroyMatrix(A);
             break;
@@ -359,13 +359,13 @@ int main()
 		case 14:
         {
             Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÊäÈë¾ØÕóµÄĞÅÏ¢\n");
+			printf("è¾“å…¥çŸ©é˜µçš„ä¿¡æ¯\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InputMatrix(A);
             NormMatrix(A);
-            printf("ÒÔÏÂÊÇ¹éÒ»»¯ºóµÄ¾ØÕó\n");
+            printf("ä»¥ä¸‹æ˜¯å½’ä¸€åŒ–åçš„çŸ©é˜µ\n");
             NormMatrix(A);
             PrintfMatrix(A);
             DestroyMatrix(A);
@@ -374,14 +374,14 @@ int main()
 		case 15:
         {
             Matrix *A=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÒÔÏÂĞèÒªÊäÈëµÄÊÇËæ»úÊı¾ØÕóµÄĞÔÖÊ\n");
+			printf("ä»¥ä¸‹éœ€è¦è¾“å…¥çš„æ˜¯éšæœºæ•°çŸ©é˜µçš„æ€§è´¨\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
 			InitialMatrixRand(A,row_1,col_1);
 			PrintfMatrix(A);
             NormMatrix(A);
-            printf("ÒÔÏÂÊÇ¹éÒ»»¯ºóµÄ¾ØÕó\n");
+            printf("ä»¥ä¸‹æ˜¯å½’ä¸€åŒ–åçš„çŸ©é˜µ\n");
             NormMatrix(A);
             PrintfMatrix(A);
             DestroyMatrix(A);
@@ -391,7 +391,7 @@ int main()
         {
             Matrix *A=(Matrix *)malloc(sizeof(Matrix));
             Matrix *B=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÊäÈë¾ØÕóµÄĞÅÏ¢\n");
+			printf("è¾“å…¥çŸ©é˜µçš„ä¿¡æ¯\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(A,row_1,col_1);
@@ -406,7 +406,7 @@ int main()
         {
             Matrix *A=(Matrix *)malloc(sizeof(Matrix));
             Matrix *B=(Matrix *)malloc(sizeof(Matrix));
-			printf("ÒÔÏÂĞèÒªÊäÈëµÄÊÇËæ»úÊı¾ØÕóµÄĞÔÖÊ\n");
+			printf("ä»¥ä¸‹éœ€è¦è¾“å…¥çš„æ˜¯éšæœºæ•°çŸ©é˜µçš„æ€§è´¨\n");
 			int row_1=get_row();
 			int col_1=get_col();
 			InitialMatrix(B,row_1,col_1);
@@ -422,7 +422,7 @@ int main()
 		{
 			return 0;
 		}
-		default : printf("¸Ã¹¦ÄÜ²»´æÔÚ£¡£¡\n");exit(-1);
+		default : printf("è¯¥åŠŸèƒ½ä¸å­˜åœ¨ï¼ï¼\n");exit(-1);
 
 	}
 }
@@ -430,16 +430,16 @@ int main()
 int get_row()
 {
 	int n;
-	printf("ÊäÈë¾ØÕóµÄĞĞÊı\n");
+	printf("è¾“å…¥çŸ©é˜µçš„è¡Œæ•°\n");
 	if(scanf("%d",&n)!=1)
 	{
-		printf("ÄãÊäÈëµÄ²»ÊÇÒ»¸öÊı×Ö,ÇëÖØĞÂÊäÈë£º\n");
+		printf("ä½ è¾“å…¥çš„ä¸æ˜¯ä¸€ä¸ªæ•°å­—,è¯·é‡æ–°è¾“å…¥ï¼š\n");
 		getchar();
 		return get_row();
 	}
 	if(n<1)
 	{
-		printf("ÄãÊäÈëµÄÊı×Ö²»Âú×ãÒªÇó,ÇëÖØĞÂÊäÈë£º\n");
+		printf("ä½ è¾“å…¥çš„æ•°å­—ä¸æ»¡è¶³è¦æ±‚,è¯·é‡æ–°è¾“å…¥ï¼š\n");
 		getchar();
 		return get_row();
 	}
@@ -448,16 +448,16 @@ int get_row()
 int get_col()
 {
 	int n;
-	printf("ÊäÈë¾ØÕóµÄÁĞÊı\n");
+	printf("è¾“å…¥çŸ©é˜µçš„åˆ—æ•°\n");
 	if(scanf("%d",&n)!=1)
 	{
-		printf("ÄãÊäÈëµÄ²»ÊÇÒ»¸öÊı×Ö,ÇëÖØĞÂÊäÈë£º\n");
+		printf("ä½ è¾“å…¥çš„ä¸æ˜¯ä¸€ä¸ªæ•°å­—,è¯·é‡æ–°è¾“å…¥ï¼š\n");
 		getchar();
 		return get_col();
 	}
 	if(n<1)
 	{
-		printf("ÄãÊäÈëµÄÊı×Ö²»Âú×ãÒªÇó,ÇëÖØĞÂÊäÈë£º\n");
+		printf("ä½ è¾“å…¥çš„æ•°å­—ä¸æ»¡è¶³è¦æ±‚,è¯·é‡æ–°è¾“å…¥ï¼š\n");
 		getchar();
 		return get_col();
 	}
@@ -500,7 +500,7 @@ void InitialMatrixRand(Matrix *A,int row,int col)
 }
 void InputMatrix(Matrix *A)
 {
-	printf("Ò»ĞĞÒ»ĞĞµÄÊäÈëÊı¾İ,Ã¿Ò»ĞĞµÄÊı¾İÓÃ¿Õ¸ñ¸ô¿ª\n");
+	printf("ä¸€è¡Œä¸€è¡Œçš„è¾“å…¥æ•°æ®,æ¯ä¸€è¡Œçš„æ•°æ®ç”¨ç©ºæ ¼éš”å¼€\n");
 	for(int i=0;i<A->row;i++)
 	{
 		for(int j=0;j<A->col;j++)
@@ -669,7 +669,7 @@ void ReverseMatrix(Matrix *A,Matrix *B)
 {
     if(B->col!=B->row)
     {
-        printf("¸Ã¾ØÕó²»ÊÇ·½Õó£¬²»¿ÉÒÔÇóÄæ¾ØÕó");
+        printf("è¯¥çŸ©é˜µä¸æ˜¯æ–¹é˜µï¼Œä¸å¯ä»¥æ±‚é€†çŸ©é˜µ");
     }
     else
     {
@@ -680,7 +680,7 @@ void ReverseMatrix(Matrix *A,Matrix *B)
         }
         REM(A,B);
 		Matrix_I(A,B);
-        printf("¾ØÕóµÄÄæ¾ØÕóÈçÏÂ£º\n");
+        printf("çŸ©é˜µçš„é€†çŸ©é˜µå¦‚ä¸‹ï¼š\n");
         PrintfMatrix(A);
 
     }
@@ -708,15 +708,15 @@ void SwapRow(Matrix *A,Matrix *B,int UseRow)
                 
             }
         }
-        if(B->mat[UseRow][UseRow]==0)
+        if(B->mat[UseRow][UseRow]!=0)
         {
-            printf("¸Ã¾ØÕó²»¿ÉÄæ£¡£¡£¡£¡£¡");
-            exit(-1);
+            break;
+            
         }
     }
 	if(B->mat[UseRow][UseRow]==0)
         {
-            printf("¸Ã¾ØÕó²»¿ÉÄæ£¡£¡£¡£¡£¡");
+            printf("è¯¥çŸ©é˜µä¸å¯é€†ï¼ï¼ï¼ï¼ï¼");
             exit(-1);
         }
 }
